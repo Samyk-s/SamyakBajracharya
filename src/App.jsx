@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import 'flowbite/dist/flowbite.min.css';
+import CustomFooter from "./components/Footer";
 export default function App() {
   return (
     <Router>
@@ -14,7 +15,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-     
+      <CustomFooter/>
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 import { Button, Navbar } from "flowbite-react";
 import { DarkThemeToggle, Flowbite } from "flowbite-react";
-import { Link } from 'react-router-dom';
+
 
 export default function CustomNavbar() {
   return (
@@ -19,11 +19,13 @@ export default function CustomNavbar() {
         <div className="flex md:order-2">
         <div className="flex flex-wrap gap-2">
         <DarkThemeToggle />
-        <Link to="/login">
-      <Button color="blue" pill>
-        Resume
-      </Button>
-    </Link>
+        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+  <Button color="blue" pill>
+    Resume
+  </Button>
+</a>
+
+
       
    
 
