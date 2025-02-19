@@ -1,3 +1,4 @@
+import Skill from "./skill";
 
 export default function Home() {
   return (
@@ -7,11 +8,18 @@ export default function Home() {
         <h1 className="text-4xl text-gray-900 dark:text-white md:text-6xl font-bold">
           Hi, I'm <span className="text-blue-400">Samyak Bajracharya</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 mt-4">
+        <p className="text-lg md:text-xl text-gray-900 mt-4 dark:text-gray-300">
           Aspiring Frontend Developer | React Enthusiast
         </p>
-        <p className="text-gray-400 mt-2">
-          Passionate about crafting intuitive and user-friendly web experiences.
+        <p className="text-gray-900 mt-2 dark:text-gray-300">
+          Aspiring Frontend Developer with hands-on experience in building
+          interactive and responsive web applications using React.js. Recently
+          completed React.js training from Broadway Infosys, with additional
+          expertise in state management and React Router. Passionate about
+          creating intuitive and user-friendly web experiences. Solid
+          understanding of frontend technologies, including HTML, CSS,
+          JavaScript, and React best practices. Seeking an opportunity to
+          leverage my skills in a dynamic development environment.
         </p>
         <a
           href="mailto:samykbajr919@gmail.com"
@@ -21,25 +29,7 @@ export default function Home() {
         </a>
       </section>
 
-      {/* Skills Section */}
-      <section className="max-w-4xl mx-auto px-6 py-10">
-        <h2 className="text-3xl font-bold text-center text-blue-400">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 text-center">
-          {[
-            "React.js",
-            "JavaScript (ES6+)",
-            "Tailwind CSS",
-            "Redux",
-            "Next.js",
-            "Git",
-            "Figma",
-          ].map((skill) => (
-            <span key={skill} className="px-4 py-2 bg-gray-800 rounded-lg">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </section>
+      <Skill/> 
 
       {/* Projects Section */}
       <section className="max-w-4xl mx-auto px-6 py-10">
@@ -76,8 +66,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      
     </main>
   );
 }
