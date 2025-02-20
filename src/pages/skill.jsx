@@ -1,54 +1,39 @@
-export default function Skill() {
-    const images = [
-      { src: "/react.jpg", alt: "React" },
-      { src: "/github.jpg", alt: "GitHub" },
-      { src: "/yarn.jpg", alt: "Yarn" },
-      { src: "/router.jpg", alt: "Router" }, // Fixed alt text
-      { src: "/redux.jpg", alt: "Redux" }, // Fixed alt text
-    ];
+const skills = [
+  { image: 'tailwindcss.jpg' },
+  { image: 'react.jpg' },
+  { image: 'yarn.jpg' },
+  { image: 'vite.jpg' },
+  { image: 'flowbite.jpg' },
+  { image: 'github.jpg' },
+  { image: 'redux.jpg' },
+  { image: 'router.jpg' },
+];
 
-    return (
-      <>
-        <section className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="text-3xl font-bold text-center text-blue-400">Skills</h2>
-        </section>
-        <aside
-          aria-label="Related articles"
-          className="py-8 lg:py-24 dark:bg-gray-700"
-        >
-          <div className="px-4 mx-auto max-w-screen-xl">
-            <div className="overflow-hidden relative">
-              <div className="flex animate-scroll">
-                {/* Loop through the images array and concatenate enough copies */}
-                {images.concat(images, images).map((image, index) => (
-                  <div key={index} className="flex-shrink-0 w-48 p-2">
-                    <img
-                      src={image.src}
-                      className="rounded-lg"
-                      alt={image.alt}
-                    />
-                  </div>
-                ))}
-              </div>
+const Skills = () => {
+  return (
+    <section className="py-12">
+      <div className="container mx-auto text-center">
+      <h2 className="text-3xl font-bold text-center text-blue-400">
+        
+          My Skills</h2>
+        {/* Grid with margin and 4 items per row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 lg:px-8">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg p-6 rounded-xl flex items-center justify-center hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src={skill.image}
+                alt="Skill Icon"
+                className="w-28 h-28 object-contain" // Adjusted size for better visibility
+              />
             </div>
-          </div>
-        </aside>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-        <style jsx>{`
-          .animate-scroll {
-            display: flex;
-            animation: scroll 20s linear infinite;
-          }
-
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-66.66%); /* Adjusted for the concatenated images */
-            }
-          }
-        `}</style>
-      </>
-    );
-}
+export default Skills;

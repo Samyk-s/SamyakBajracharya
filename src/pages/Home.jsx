@@ -1,9 +1,7 @@
-import Skill from "./skill";
-
+import Skills from "./skill";
 export default function Home() {
   return (
     <main className="bg-white dark:bg-gray-700 text-white min-h-screen">
-      {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-20 px-6">
         <h1 className="text-4xl text-gray-900 dark:text-white md:text-6xl font-bold">
           Hi, I'm <span className="text-blue-400">Samyak Bajracharya</span>
@@ -21,15 +19,10 @@ export default function Home() {
           JavaScript, and React best practices. Seeking an opportunity to
           leverage my skills in a dynamic development environment.
         </p>
-        <a
-          href="mailto:samykbajr919@gmail.com"
-          className="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-lg font-medium transition"
-        >
-          Get in Touch
-        </a>
+       
       </section>
 
-      <Skill/> 
+      <Skills/>
 
       {/* Projects Section */}
       <section className="max-w-4xl mx-auto px-6 py-10">
